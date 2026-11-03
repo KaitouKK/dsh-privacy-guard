@@ -1,0 +1,38 @@
+{
+  "name": "dsh-privacy-guard",
+  "version": "0.1.0",
+  "description": "个人智能体隐私防护插件：PII 检测与动态脱敏、提示词注入检测、敏感操作审批拦截与出境审计。面向 DeepSeek Harness (DSH)。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "privacy",
+    "security",
+    "pii",
+    "redaction",
+    "prompt-injection"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

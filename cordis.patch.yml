@@ -1,0 +1,14 @@
+# dsh-privacy-guard —— DSH 插件装配声明（bundle）
+# 用法：
+#   dsh web --patch ./cordis.patch.yml
+# 或将本 bundle 安装进 DSH plugins 目录后由 loader 自动装配。
+# 插件 id 与入口：id 用于唯一标识，name 指向本 bundle 内 lib/index.js。
+
+- select:
+    - id: privacy-guard
+      name: './lib/index.js'
+      # 可选配置（在 DSH Web UI / cordis.yml 中可覆盖）：
+      # config:
+      #   privacyGuard:
+      #     logDir: './.dsh-privacy-audit'   # 审计日志落盘目录，默认内存
+      #     silent: false
